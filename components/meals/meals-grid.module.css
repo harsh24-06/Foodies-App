@@ -1,0 +1,10 @@
+.meals {
+    width: 100%; /* Take up full width of container */
+    max-width: 80rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 1fr)); /* 3 columns, min width 20rem */
+    grid-gap: 5rem;
+    margin: 2rem auto;
+    list-style: none;
+    padding: 0;
+}
