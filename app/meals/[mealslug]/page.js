@@ -1,9 +1,14 @@
 import Image from "next/image";
 import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
+import { notFound } from "next/navigation";
 
 export default function MealDefaultPage({ params }) {
   const meal = getMeal(params.mealslug);
+  if(!meal)
+  {
+    notFound();
+  }
   meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
   return (
     <>
